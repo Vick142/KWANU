@@ -1,7 +1,7 @@
 # Kwanu (Malawi Rentals) (Flutter)
 
 Kwanu is a Flutter mobile app focused on rental listings in Malawi.
-The goal is to keep things simple — clean UI, straightforward navigation, and fast browsing of houses.
+The goal is to keep things simple, clean UI, straightforward navigation, and fast browsing of houses.
 
 Right now the project is still in the **UI + local data** stage. I'm focusing on getting the core screens and flows right before wiring it up to authentication and a backend (likely Firebase).
 
