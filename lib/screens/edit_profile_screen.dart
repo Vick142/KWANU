@@ -18,10 +18,11 @@ class EditProfileScreen extends StatefulWidget {
 
 class _EditProfileScreenState extends State<EditProfileScreen> {
   static const Color _bg = Color(0xFFF5F5F5);
-  static const Color _card = Color(0xFF0D0D0D);
-  static const Color _border = Color(0xFF444444);
-  static const Color _label = Color(0xFF9E9E9E);
-  static const Color _accent = Color(0xFF2CB9C8); // teal/blue accent
+  static const Color _card = Color(0xFFFAFAFA);
+  static const Color _border = Color(0xFFE0E0E0);
+  static const Color _label = Color(0xFF757575);
+  static const Color _textPrimary = Color(0xFF212121);
+  static const Color _accent = Color(0xFFE67E22); // app primary orange
 
   late final TextEditingController _nameController;
   late final TextEditingController _emailController;
@@ -52,7 +53,8 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
     return InputDecoration(
       labelText: label,
       labelStyle: const TextStyle(color: _label),
-      filled: false,
+      filled: true,
+      fillColor: Colors.white,
       enabledBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(8),
         borderSide: const BorderSide(color: _border, width: 1),
@@ -120,13 +122,14 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
           child: Stack(
             clipBehavior: Clip.none,
             children: [
-              // Dark form card
+              // Form card keeps the same neutral palette used across the app.
               Padding(
                 padding: const EdgeInsets.only(top: 34),
                 child: Container(
                   decoration: BoxDecoration(
                     color: _card,
                     borderRadius: BorderRadius.circular(16),
+                    border: Border.all(color: _border),
                   ),
                   padding: const EdgeInsets.fromLTRB(16, 52, 16, 18),
                   child: Column(
@@ -134,7 +137,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                     children: [
                       TextField(
                         controller: _nameController,
-                        style: const TextStyle(color: Colors.white, fontSize: 15),
+                        style: const TextStyle(color: _textPrimary, fontSize: 15),
                         cursorColor: _accent,
                         decoration: _decoration(label: 'Your Full Name'),
                       ),
@@ -143,7 +146,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                       TextField(
                         controller: _emailController,
                         enabled: false,
-                        style: const TextStyle(color: Colors.white70, fontSize: 15),
+                        style: const TextStyle(color: Colors.black54, fontSize: 15),
                         decoration: _decoration(label: 'Email'),
                       ),
                       const SizedBox(height: 8),
@@ -183,7 +186,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
 
                       TextField(
                         controller: _phoneController,
-                        style: const TextStyle(color: Colors.white, fontSize: 15),
+                        style: const TextStyle(color: _textPrimary, fontSize: 15),
                         cursorColor: _accent,
                         keyboardType: TextInputType.phone,
                         decoration: _decoration(label: 'Your Phone Number'),
@@ -192,10 +195,10 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
 
                       DropdownButtonFormField<String>(
                         initialValue: _userType,
-                        dropdownColor: const Color(0xFF1A1A1A),
+                        dropdownColor: Colors.white,
                         icon: const Icon(Icons.keyboard_arrow_down, color: _label),
                         decoration: _decoration(label: 'User Type'),
-                        style: const TextStyle(color: Colors.white, fontSize: 15),
+                        style: const TextStyle(color: _textPrimary, fontSize: 15),
                         items: const [
                           DropdownMenuItem(value: 'Renter', child: Text('Renter')),
                           DropdownMenuItem(value: 'Landlord', child: Text('Landlord')),
@@ -210,7 +213,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
 
                       TextField(
                         controller: _locationController,
-                        style: const TextStyle(color: Colors.white, fontSize: 15),
+                        style: const TextStyle(color: _textPrimary, fontSize: 15),
                         cursorColor: _accent,
                         decoration: _decoration(label: 'Your Location'),
                       ),
@@ -231,7 +234,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                     decoration: BoxDecoration(
                       color: const Color(0xFFE0E0E0),
                       shape: BoxShape.circle,
-                      border: Border.all(color: Colors.white, width: 4),
+                      border: Border.all(color: Colors.grey.shade100, width: 4),
                     ),
                     child: const Icon(
                       Icons.person_outline,

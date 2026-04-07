@@ -588,43 +588,21 @@ class _HousesListScreenState extends State<HousesListScreen> {
         // Search mode actions (show after the search bar)
         Padding(
           padding: const EdgeInsets.fromLTRB(16, 0, 16, 8),
-          child: Row(
-            children: [
-              Expanded(
-                child: OutlinedButton.icon(
-                  onPressed: _openMapSearch,
-                  icon: const Icon(Icons.map_outlined, size: 18),
-                  label: const Text('Map'),
-                  style: OutlinedButton.styleFrom(
-                    foregroundColor: primaryColor,
-                    side: BorderSide(color: primaryColor.withValues(alpha: 0.6)),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(14),
-                    ),
-                    padding: const EdgeInsets.symmetric(vertical: 12),
-                  ),
+          child: SizedBox(
+            width: double.infinity,
+            child: OutlinedButton.icon(
+              onPressed: _openMapSearch,
+              icon: const Icon(Icons.map_outlined, size: 18),
+              label: const Text('Map'),
+              style: OutlinedButton.styleFrom(
+                foregroundColor: primaryColor,
+                side: BorderSide(color: primaryColor.withValues(alpha: 0.6)),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(14),
                 ),
+                padding: const EdgeInsets.symmetric(vertical: 12),
               ),
-              const SizedBox(width: 12),
-              Expanded(
-                child: FilledButton.icon(
-                  onPressed: () {
-                    // "Search" keeps the user in text-search mode (list filtering).
-                    // If keyboard isn't open yet, focus the search field.
-                    _searchFocusNode.requestFocus();
-                  },
-                  icon: const Icon(Icons.search, size: 18),
-                  label: const Text('Search'),
-                  style: FilledButton.styleFrom(
-                    backgroundColor: primaryColor,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(14),
-                    ),
-                    padding: const EdgeInsets.symmetric(vertical: 12),
-                  ),
-                ),
-              ),
-            ],
+            ),
           ),
         ),
 
