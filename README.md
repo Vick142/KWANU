@@ -1,11 +1,10 @@
-<<<<<<< HEAD
-#+#+#+#+## KWANU — Malawi Rentals (Flutter)
+HEAD
+ KWANU — Malawi Rentals (Flutter)
 
 Kwanu is a modern, minimal real estate mobile app focused on **rental listings in Malawi**. The UI is intentionally clean and professional: light/neutral backgrounds, flat surfaces (no heavy shadows), consistent spacing, and a warm orange accent pulled from the Kwanu logo.
 
 This repository is currently in the **UI + navigation + local demo data** phase. The intent is to finalize the core flows and screens first, then plug in real authentication and a database (Firebase is on the TODO list).
 
----
 
 ## What’s implemented so far (current behavior)
 
