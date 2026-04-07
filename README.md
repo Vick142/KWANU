@@ -208,7 +208,3 @@ We are intentionally building the application in layers:
 3. Introduce authentication and database once the UX is stable.
 
 This approach prevents the project from getting blocked by backend details while the product design is still evolving.
-=======
-
->>>>>>> 5500fc84a0992a4575bc23d2af0f22905c8bb30d
-
