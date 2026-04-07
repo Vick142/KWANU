@@ -1,4 +1,4 @@
-# Kwanu — Malawi Rentals (Flutter)
+# Kwanu (Malawi Rentals) (Flutter)
 
 Kwanu is a Flutter mobile app focused on rental listings in Malawi.
 The goal is to keep things simple — clean UI, straightforward navigation, and fast browsing of houses.
